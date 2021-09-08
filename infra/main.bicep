@@ -196,13 +196,13 @@ resource managementResourceGroup 'Microsoft.Resources/resourceGroups@2021-01-01'
 output vnetId string = networkServices.outputs.vnetId
 output firewallPrivateIp string = networkServices.outputs.firewallPrivateIp
 //** output purviewId string = governanceResources.outputs.purviewId
-output privateDnsZoneIdKeyVault string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdKeyVault : ''
+//output privateDnsZoneIdKeyVault string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdKeyVault : ''
 output privateDnsZoneIdDataFactory string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdDataFactory : ''
 output privateDnsZoneIdDataFactoryPortal string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdDataFactoryPortal : ''
-output privateDnsZoneIdBlob string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdBlob : ''
+//output privateDnsZoneIdBlob string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdBlob : ''
 output privateDnsZoneIdDfs string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdDfs : ''
 output privateDnsZoneIdSqlServer string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdSqlServer : ''
 output privateDnsZoneIdMySqlServer string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdMySqlServer : ''
-output privateDnsZoneIdNamespace string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdNamespace : ''
+//output privateDnsZoneIdNamespace string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdNamespace : ''
 output privateDnsZoneIdSynapseDev string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdSynapseDev : ''
 output privateDnsZoneIdSynapseSql string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdSynapseSql : ''

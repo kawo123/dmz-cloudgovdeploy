@@ -3,23 +3,24 @@
 
 // This template is used as a module from the main.bicep template. 
 // The module contains a template to create the governance services.
-targetScope = 'resourceGroup'
+//targetScope = 'resourceGroup'
 
 // Parameters
-param location string
-param prefix string
-param tags object
-param subnetId string
-param privateDnsZoneIdPurview string = ''
-param privateDnsZoneIdStorageBlob string = ''
-param privateDnsZoneIdStorageQueue string = ''
-param privateDnsZoneIdEventhubNamespace string = ''
-param privateDnsZoneIdKeyVault string = ''
+//param location string
+//param prefix string
+//param tags object
+//param subnetId string
+//param privateDnsZoneIdPurview string = ''
+//param privateDnsZoneIdStorageBlob string = ''
+//param privateDnsZoneIdStorageQueue string = ''
+//param privateDnsZoneIdEventhubNamespace string = ''
+//param privateDnsZoneIdKeyVault string = ''
 
 // Variables
-var purview001Name = '${prefix}-purview001'
-var keyvault001Name = '${prefix}-vault001'
+//var purview001Name = '${prefix}-purview001'
+//var keyvault001Name = '${prefix}-vault001'
 
+/*
 // Resources
 module purview001 'services/purview.bicep' = {
   name: 'purview001'
@@ -35,7 +36,9 @@ module purview001 'services/purview.bicep' = {
     privateDnsZoneIdEventhubNamespace: privateDnsZoneIdEventhubNamespace
   }
 }
+*/
 
+/*
 module keyVault001 'services/keyvault.bicep' = {
   name: 'keyVault001'
   scope: resourceGroup()
@@ -48,6 +51,7 @@ module keyVault001 'services/keyvault.bicep' = {
   }
 }
 
+
 module purviewKeyVaultRoleAssignment 'auxiliary/purviewRoleAssignment.bicep' = {
   name: 'purviewKeyVaultRoleAssignment'
   scope: resourceGroup()
@@ -59,3 +63,4 @@ module purviewKeyVaultRoleAssignment 'auxiliary/purviewRoleAssignment.bicep' = {
 
 // Outputs
 output purviewId string = purview001.outputs.purviewId
+*/

@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT license.
-
+/*
 // This template is used to create a Purview account.
 targetScope = 'resourceGroup'
 
@@ -9,7 +9,7 @@ param location string
 param tags object
 param subnetId string
 param purviewName string
-param privateDnsZoneIdPurview string
+//param privateDnsZoneIdPurview string
 param privateDnsZoneIdStorageBlob string
 param privateDnsZoneIdStorageQueue string
 param privateDnsZoneIdEventhubNamespace string
@@ -250,3 +250,5 @@ resource purviewPrivateEndpointNamespaceARecord 'Microsoft.Network/privateEndpoi
 
 // Outputs
 output purviewId string = purview.id
+
+*/
