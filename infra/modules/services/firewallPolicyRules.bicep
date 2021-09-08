@@ -194,7 +194,6 @@ resource networkRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2
           }
         ]
       }
-      /*
       {
         name: 'Azure-NetworkRules'
         priority: 10400
@@ -225,7 +224,6 @@ resource networkRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2
           }
         ]
       } 
-      */
     ]
   }
 }

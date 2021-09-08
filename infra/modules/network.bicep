@@ -144,7 +144,7 @@ resource firewallPolicy 'Microsoft.Network/firewallPolicies@2020-11-01' = if (en
   location: location
   tags: tags
   properties: {
-    /**
+    /** Removed Azure Firewall Feature for Azure Cloud Gov Deployment.
     intrusionDetection: {
       mode: 'Deny'
       configuration: {
@@ -200,6 +200,8 @@ resource firewall 'Microsoft.Network/azureFirewalls@2020-11-01' = if (enableDnsA
     '3'
   ]
   properties: {
+    /* Changed Sku tier to Standard for CloudGov Deployment. 
+    Will add a conditional flaf for Azure Commercial or Cloud Gov */
     sku: {
       name: 'AZFW_VNet'
       tier: 'Standard'
