@@ -39,16 +39,16 @@ param dnsServerAdresses array = [
 param firewallPolicyId string = ''
 
 // Private DNS Zone parameters
-@description('Specifies the resource ID of the private DNS zone for Key Vault. Optional if `enableDnsAndFirewallDeployment` is set to `true`.')
-param privateDnsZoneIdKeyVault string = ''
-@description('Specifies the resource ID of the private DNS zone for Purview. Optional if `enableDnsAndFirewallDeployment` is set to `true`.')
-param privateDnsZoneIdPurview string = ''
-@description('Specifies the resource ID of the private DNS zone for Queue storage. Optional if `enableDnsAndFirewallDeployment` is set to `true`.')
-param privateDnsZoneIdQueue string = ''
-@description('Specifies the resource ID of the private DNS zone for Blob storage. Optional if `enableDnsAndFirewallDeployment` is set to `true`.')
-param privateDnsZoneIdBlob string = ''
-@description('Specifies the resource ID of the private DNS zone for EventHub namespaces. Optional if `enableDnsAndFirewallDeployment` is set to `true`.')
-param privateDnsZoneIdNamespace string = ''
+// @description('Specifies the resource ID of the private DNS zone for Key Vault. Optional if `enableDnsAndFirewallDeployment` is set to `true`.')
+// param privateDnsZoneIdKeyVault string = ''
+// @description('Specifies the resource ID of the private DNS zone for Purview. Optional if `enableDnsAndFirewallDeployment` is set to `true`.')
+// param privateDnsZoneIdPurview string = ''
+// @description('Specifies the resource ID of the private DNS zone for Queue storage. Optional if `enableDnsAndFirewallDeployment` is set to `true`.')
+// param privateDnsZoneIdQueue string = ''
+// @description('Specifies the resource ID of the private DNS zone for Blob storage. Optional if `enableDnsAndFirewallDeployment` is set to `true`.')
+// param privateDnsZoneIdBlob string = ''
+// @description('Specifies the resource ID of the private DNS zone for EventHub namespaces. Optional if `enableDnsAndFirewallDeployment` is set to `true`.')
+// param privateDnsZoneIdNamespace string = ''
 @description('Specifies the resource ID of the private DNS zone for Container Registry. Optional if `enableDnsAndFirewallDeployment` is set to `true`.')
 param privateDnsZoneIdContainerRegistry string = ''
 @description('Specifies the resource ID of the private DNS zone for Synapse. Optional if `enableDnsAndFirewallDeployment` is set to `true`.')
@@ -115,6 +115,7 @@ resource governanceResourceGroup 'Microsoft.Resources/resourceGroups@2021-01-01'
   properties: {}
 }
 
+/*
 module governanceResources 'modules/governance.bicep' = {
   name: 'governanceResources'
   scope: governanceResourceGroup
@@ -130,6 +131,7 @@ module governanceResources 'modules/governance.bicep' = {
     privateDnsZoneIdKeyVault: enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdKeyVault : privateDnsZoneIdKeyVault
   }
 }
+*/
 
 // Container resources
 resource containerResourceGroup 'Microsoft.Resources/resourceGroups@2021-01-01' = {
@@ -193,7 +195,7 @@ resource managementResourceGroup 'Microsoft.Resources/resourceGroups@2021-01-01'
 // Outputs
 output vnetId string = networkServices.outputs.vnetId
 output firewallPrivateIp string = networkServices.outputs.firewallPrivateIp
-output purviewId string = governanceResources.outputs.purviewId
+//output purviewId string = governanceResources.outputs.purviewId
 output privateDnsZoneIdKeyVault string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdKeyVault : ''
 output privateDnsZoneIdDataFactory string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdDataFactory : ''
 output privateDnsZoneIdDataFactoryPortal string = enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdDataFactoryPortal : ''
