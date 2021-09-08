@@ -328,7 +328,7 @@ resource applicationRules 'Microsoft.Network/firewallPolicies/ruleCollectionGrou
             ]
             fqdnTags: []
             targetFqdns: [
-              environment().authentication.loginEndpoint
+              'login.microsoftonline.com'
               'login.windows.net'
             ]
             targetUrls: []
