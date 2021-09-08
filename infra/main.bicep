@@ -170,9 +170,9 @@ module consumptionResources 'modules/consumption.bicep' = {
     tags: tagsJoined
     subnetId: networkServices.outputs.serviceSubnet
     privateDnsZoneIdSynapseprivatelinkhub: enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdSynapse : privateDnsZoneIdSynapse
-    privateDnsZoneIdAnalysis: enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdAnalysis : ''
-    privateDnsZoneIdPbiDedicated: enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdPbiDedicated : ''
-    privateDnsZoneIdPowerQuery: enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdPowerQuery : ''
+   // privateDnsZoneIdAnalysis: enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdAnalysis : ''
+   // privateDnsZoneIdPbiDedicated: enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdPbiDedicated : ''
+   // privateDnsZoneIdPowerQuery: enableDnsAndFirewallDeployment ? globalDnsZones.outputs.privateDnsZoneIdPowerQuery : ''
   }
 }
 
