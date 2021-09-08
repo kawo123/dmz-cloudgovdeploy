@@ -11,13 +11,13 @@ param prefix string
 param tags object
 param subnetId string
 param privateDnsZoneIdSynapseprivatelinkhub string = ''
-param privateDnsZoneIdAnalysis string = ''
-param privateDnsZoneIdPbiDedicated string = ''
-param privateDnsZoneIdPowerQuery string = ''
+// param privateDnsZoneIdAnalysis string = ''
+// param privateDnsZoneIdPbiDedicated string = ''
+// param privateDnsZoneIdPowerQuery string = ''
 
 // Variables
 var synapsePrivatelinkHub001Name = '${prefix}-synapseplhub001'
-var powerbiPrivateLink001Name = '${prefix}-powerbipl001'
+//var powerbiPrivateLink001Name = '${prefix}-powerbipl001'
 
 // Resources
 module synapsePrivateLinkHub001 'services/synapseprivatelinkhub.bicep' = {
