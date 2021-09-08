@@ -37,22 +37,7 @@
         "firewallPolicyId": {
             "value": ""
         },
-        "privateDnsZoneIdBlob": {
-            "value": ""
-        },
         "privateDnsZoneIdContainerRegistry": {
-            "value": ""
-        },
-        "privateDnsZoneIdKeyVault": {
-            "value": ""
-        },
-        "privateDnsZoneIdNamespace": {
-            "value": ""
-        },
-        "privateDnsZoneIdPurview": {
-            "value": ""
-        },
-        "privateDnsZoneIdQueue": {
             "value": ""
         },
         "privateDnsZoneIdSynapse": {
