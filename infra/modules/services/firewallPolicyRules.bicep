@@ -194,6 +194,7 @@ resource networkRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2
           }
         ]
       }
+      /*
       {
         name: 'Azure-NetworkRules'
         priority: 10400
@@ -223,7 +224,8 @@ resource networkRules 'Microsoft.Network/firewallPolicies/ruleCollectionGroups@2
             description: 'Allow Windows Activation in Azure through Azure KMS Service'
           }
         ]
-      }
+      } 
+      */
     ]
   }
 }
@@ -326,7 +328,7 @@ resource applicationRules 'Microsoft.Network/firewallPolicies/ruleCollectionGrou
             ]
             fqdnTags: []
             targetFqdns: [
-              'login.microsoftonline.com'
+              environment().authentication.loginEndpoint
               'login.windows.net'
             ]
             targetUrls: []
