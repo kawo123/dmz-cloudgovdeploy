@@ -157,7 +157,7 @@ resource firewallPolicy 'Microsoft.Network/firewallPolicies@2020-11-01' = if (en
       ipAddresses: []
     }
     sku: {
-      tier: 'Premium'
+      tier: 'Standard'
     }
     dnsSettings: {
       enableProxy: true
@@ -200,7 +200,7 @@ resource firewall 'Microsoft.Network/azureFirewalls@2020-11-01' = if (enableDnsA
   properties: {
     sku: {
       name: 'AZFW_VNet'
-      tier: 'Premium'
+      tier: 'Standard'
     }
     ipConfigurations: [
       {
