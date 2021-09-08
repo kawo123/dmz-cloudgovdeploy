@@ -144,6 +144,7 @@ resource firewallPolicy 'Microsoft.Network/firewallPolicies@2020-11-01' = if (en
   location: location
   tags: tags
   properties: {
+    /**
     intrusionDetection: {
       mode: 'Deny'
       configuration: {
@@ -151,6 +152,7 @@ resource firewallPolicy 'Microsoft.Network/firewallPolicies@2020-11-01' = if (en
         signatureOverrides: []
       }
     }
+    */
     threatIntelMode: 'Deny'
     threatIntelWhitelist: {
       fqdns: []
