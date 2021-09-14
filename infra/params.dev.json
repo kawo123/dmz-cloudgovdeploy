@@ -3,13 +3,13 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "location": {
-            "value": "eastus"
+            "value": "usgovvirginia"
         },
         "environment": {
             "value": "dev"
         },
         "prefix": {
-            "value": "dmzahgv"
+            "value": "dmzkwf"
         },
         "tags": {
             "value": {}
