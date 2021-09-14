@@ -15,8 +15,8 @@ on:
       - ".github/workflows/dataManagementZoneDeployment.yml"
 
 env:
-  AZURE_SUBSCRIPTION_ID: "04ecf75d-eabc-4a3e-a48a-d7e83d7a9a20" # Update to '{dataHubSubscriptionId}'
-  AZURE_LOCATION: "eastus"                                 # Update to '{regionName}'
+  AZURE_SUBSCRIPTION_ID: "744c4585-b203-4eb0-bdb3-bb32de86a9f6" # Update to '{dataHubSubscriptionId}'
+  AZURE_LOCATION: "usgovvirginia"                                 # Update to '{regionName}'
 
 jobs:
   validation:
@@ -37,6 +37,7 @@ jobs:
         uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
+          environment: "azureusgovernment"
 
       # Deploy Data Management Zone - validation
       - name: Deploy Data Management Zone - validation
@@ -80,6 +81,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
           enable-AzPSSession: true
+          environment: "azureusgovernment"
 
       # Deploy Data Management Zone
       - name: Deploy Data Management Zone
