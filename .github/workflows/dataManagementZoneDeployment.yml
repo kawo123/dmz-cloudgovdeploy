@@ -16,7 +16,7 @@ on:
 
 env:
   AZURE_SUBSCRIPTION_ID: "744c4585-b203-4eb0-bdb3-bb32de86a9f6" # Update to '{dataHubSubscriptionId}'
-  AZURE_LOCATION: "usgovvirginia"                                 # Update to '{regionName}'
+  AZURE_LOCATION: "usgovvirginia"                               # Update to '{regionName}'
 
 jobs:
   validation:
